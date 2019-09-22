@@ -4,7 +4,6 @@
       <div class="row">
         <div id="sidebar" class="col-md-3 col-sm-4 col-xs-12 sidebar">
           <div id="search">
-            <h1>HELLO WORLD</h1>
             <input
               id="location-input"
               type="text"
@@ -81,6 +80,7 @@
 
 <script>
 import Content from './components/Content.vue';
+
 export default {
   name: 'app',
   props: [],
@@ -210,6 +210,7 @@ export default {
       }
       return wind_direction;
     },
+
     // Some basic action oriented functions
     makeInputEmpty: function() {
       this.$refs.input.value = '';
@@ -261,6 +262,7 @@ export default {
         });
       });
     },
+
     // Some basic asynchronous functions
     setFormatCoordinates: async function() {
       var coordinates = await this.getCoordinates();
@@ -313,7 +315,9 @@ export default {
         alert('Hmm... Seems like our weather experts are busy!');
       }
     },
+
     // Get and set functions; often combined, because they are short
+
     // For basic info - left panel/sidebar
     getTimezone: function() {
       return this.rawWeatherData.timezone;
@@ -418,6 +422,7 @@ export default {
         this.tempVar.tempToday.unshift(maxTempObject, minTempObject);
       }
     },
+
     // For Today Highlights
     getSetUVIndex: function() {
       var uvIndex = this.rawWeatherData.currently.uvIndex;
@@ -438,6 +443,7 @@ export default {
         absoluteWindDir
       );
     },
+
     // top level for info section
     organizeCurrentWeatherInfo: function() {
       // data in this.currentWeather
@@ -460,6 +466,7 @@ export default {
       this.getSetVisibility();
       this.getSetWindStatus();
     },
+
     // topmost level orchestration
     organizeAllDetails: async function() {
       // top level organization

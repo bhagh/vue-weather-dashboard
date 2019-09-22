@@ -1,4 +1,4 @@
-# vue_weather_dashboard
+# Vue Weather Dashboard
 
 > A Vue.js project
 
