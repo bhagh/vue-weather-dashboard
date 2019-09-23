@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+You will need to get your own Google API key to input into index.html.
+
 ## Build Setup
 
 ``` bash
